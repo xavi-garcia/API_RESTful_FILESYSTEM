@@ -1,0 +1,10 @@
+#productForm{
+    padding: 30px;
+    margin:30px;
+}
+
+.nav-item{
+    margin: 10px;
+    display: flex;
+    
+}

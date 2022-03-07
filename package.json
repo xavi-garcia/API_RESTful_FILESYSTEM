@@ -1,0 +1,7 @@
+{
+  "dependencies": {
+    "express": "^4.17.3",
+    "momento": "^0.2.0",
+    "multer": "^1.4.4"
+  }
+}
