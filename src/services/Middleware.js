@@ -6,8 +6,8 @@ const validateUser = (req, res, next) => {
     next();
   } else {
     res.send({
-      status: "error",
-      error: `route /products${req.url} method ${req.method} no auhorized`,
+      status: 'error',
+      error: 'error',
     });
   }
 };
