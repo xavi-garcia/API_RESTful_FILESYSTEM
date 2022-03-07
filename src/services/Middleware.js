@@ -5,10 +5,7 @@ const validateUser = (req, res, next) => {
   if (admin) {
     next();
   } else {
-    res.send({
-      status: 'error',
-      error: 'error',
-    });
+    res.send({status: 'error',error: 'error'});
   }
 };
 
