@@ -1,0 +1,22 @@
+[
+  {
+    "title": "Growlith",
+    "price": 35,
+    "description": " funko",
+    "code": "7747",
+    "stock": 2,
+    "thumbnail": "http://localhost:8080/images/1645737180077.png",
+    "id": 1,
+    "time": "March 6th 2022, 10:28:31 pm"
+  },
+  {
+    "title": "Evee",
+    "price": 35,
+    "description": "funko",
+    "code": "7797",
+    "stock": 2,
+    "thumbnail": "http://localhost:8080/images/1645737180077.png",
+    "id": 2,
+    "time": "March 6th 2022, 10:28:47 pm"
+  }
+]
