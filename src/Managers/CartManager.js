@@ -80,14 +80,14 @@ class CartManager {
         }
     };
 
-    deleteProduct = async (cartId, id_prod) => {
+    deleteProduct = async (cartId, prodId) => {
         if (fs.existsSync(pathToCart)) {
             let carts = await fetch();
             let cart = carts.find(cart => cart.id === cartId);
             if (cart) {
-                let product = cart.product.find(prod => prod.id === id_prod);
+                let product = cart.product.find(prod => prod.id === prodId);
                 if (product) {
-                    let emptyCart = cart.product.filter(prod => prod.id !== id_prod);
+                    let emptyCart = cart.product.filter(prod => prod.id !== prodId);
                     cart.product = emptyCart;
                     await fs.promises.writeFile(pathToCart,JSON.stringify(carts, null, 2));
                     return {status:"success", message:"product deleted"}
