@@ -41,7 +41,7 @@ router.post('/:id/products', (req, res) => {
 //Gets a prod from cart and deletes it
 router.delete('/:id/products/:id_prod', (req, res) => {
     let cartId = parseInt(req.params.id);
-    let id_prod = parseInt(req.params.id_prod);
+    let id_prod = req.body.id;
     console.log(cartId, id_prod)
     cartService.deleteProduct(cartId, id_prod).then((result) => res.send(result));
 });

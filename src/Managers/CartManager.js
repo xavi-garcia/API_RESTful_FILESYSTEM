@@ -69,7 +69,7 @@ class CartManager {
                 if (cart) {
                     let products = await productService.getById(prodId);
                     if (products) {
-                        cart.product.push(products);
+                        cart.product.push(products.product.id);
                         await fs.promises.writeFile(pathToCart, JSON.stringify(carts, null, 2));
                         return {status: "success", message: "product uploaded"};
                     }
@@ -85,9 +85,9 @@ class CartManager {
             let carts = await fetch();
             let cart = carts.find(cart => cart.id === cartId);
             if (cart) {
-                let product = cart.product.find(prod => prod === id_prod);
+                let product = cart.product.find(prod => prod.id === id_prod);
                 if (product) {
-                    let emptyCart = cart.product.filter(prod => prod !== id_prod);
+                    let emptyCart = cart.product.filter(prod => prod.id !== id_prod);
                     cart.product = emptyCart;
                     await fs.promises.writeFile(pathToCart,JSON.stringify(carts, null, 2));
                     return {status:"success", message:"product deleted"}
@@ -97,7 +97,6 @@ class CartManager {
             }
         }
     };
-
 
 }
 module.exports = CartManager;
