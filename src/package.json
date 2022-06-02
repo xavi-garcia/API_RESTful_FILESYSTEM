@@ -1,0 +1,14 @@
+{"name": "apirest",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "express": "^4.17.3",
+    "momento": "^0.2.0",
+    "multer": "^1.4.4"
+  }
+}
